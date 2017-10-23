@@ -22,9 +22,41 @@ public class TallerTwoApp {
 		/*int i=ConversorStrInt.convertirInt("tres uno cuatro");
 		System.out.println(i);*/
 		
-		String str=ConversorStrInt.convertirStr(123);
-		System.out.println(str);
+		//String str=ConversorStrInt.convertirStr(123);
+		//System.out.println(str);
 		 
+		/*Contact contact=new Contact("pepe","938129442","paco@gmail.com");
+		String salida=GsonHelper.contactToJson(contact);
+		System.out.println(salida);
+		
+		String salida2="[{'name':'pepe','phone':'938129442','email':'paco@gmail.com'}]";
+		Contact contact2= GsonHelper.jsonToContact(salida2);
+		System.out.println(contact2.getName());
+		System.out.println(contact2.getPhone());
+		System.out.println(contact2.getEmail());
+		
+		
+		String s1= "[{'name':'pepe','phone':'938129442','email':'paco@gmail.com'}]"
+		+ "[{'name':'juan','phone':'908129442','email':'pepe@gmail.com'}]";
+		
+		ArrayList<Contact> contactos=new ArrayList<>();
+		contactos= GsonHelper.jsonToArrayContact(s1);
+		for(int i=0;i<contactos.size();i++){
+			System.out.println(contactos.get(i).getName());
+			System.out.println(contactos.get(i).getPhone());
+			System.out.println(contactos.get(i).getEmail());
+			System.out.println("");
+		}*/
+		 
+		 
+		ArrayList<Contact> lContactos=new ArrayList<>();
+		Contact cont=new Contact("pepe","938129442","paco@gmail.com");
+		lContactos.add(cont);
+		cont=new Contact("pakito","938129442","paco@gmail.com");
+		lContactos.add(cont);
+			
+		String result= GsonHelper.contactToJson(lContactos); 
+		System.out.println(result);
 	 }
 
 }
